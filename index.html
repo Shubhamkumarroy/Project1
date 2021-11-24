@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiceGame</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+
+        /* #B2BEB5 */
+        .dice {
+            margin-top: 100 px;
+            margin-bottom: 200 px;
+            text-align: center;
+            font-size: 5rem;
+            font-family: cursive;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        span {
+            font-size: 3rem;
+            /* text-align: ; */
+            font-weight: 500;
+            text-align: center;
+            /* margin-left: 22%; */
+        }
+
+        /* #dices{
+        text-align: center;
+    } */
+        #d1 {
+            margin-left: 30%;
+        }
+
+        #d2 {
+            margin-left: 20%;
+        }
+
+        #dices {
+            margin-bottom: 50px;
+        }
+
+        .src1 {
+            margin-left: 32%;
+        }
+
+        .src2 {
+            margin-left: 23%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="dice">REFRESH THE PAGE</h1>
+    <!-- <h2>resul</h2> -->
+    <div id="dices"><span id="d1">Player</span> <span id="d2">Computer</span> </div>
+    <div class="shub" id="shiv">
+        <!-- <img src="one.jpg" alt=""> -->
+        <img id="myImg" src="one.jpg" width="100px" alt="" class="src1">
+        <img id="myImg2" src="two.jpg" width="100px" alt="" class="src2">
+
+    </div>
+
+    <script>
+        // alert("press OK to start the game");
+        
+        var p1 = Math.round(Math.random() * 6 + 1);
+        var p2 = Math.round(Math.random() * 6 + 1);
+        if (p1 > p2) {
+            document.getElementsByClassName('dice')[0].textContent = "player wins"
+        }
+        else if (p1 == p2) {
+            document.getElementsByClassName('dice')[0].textContent = "match will be tie"
+        }
+        else {
+            document.getElementsByClassName('dice')[0].textContent = "Computer wins"
+        }
+        if (p1 == 1)
+            document.getElementById("myImg").src = "one.jpg";
+        else if (p1 == 2)
+            document.getElementById("myImg").src = "two.jpg";
+        else if (p1 == 3)
+            document.getElementById("myImg").src = "three.jpg";
+        else if (p1 == 4)
+            document.getElementById("myImg").src = "four.jpg";
+        else if (p1 == 5)
+            document.getElementById("myImg").src = "five.jpg";
+        else if (p1 == 6)
+            document.getElementById("myImg").src = "six.jpg";
+        if (p2 == 1)
+            document.getElementById("myImg2").src = "one.jpg";
+        else if (p2 == 2)
+            document.getElementById("myImg2").src = "two.jpg";
+        else if (p2 == 3)
+            document.getElementById("myImg2").src = "three.jpg";
+        else if (p2 == 4)
+            document.getElementById("myImg2").src = "four.jpg";
+        else if (p2 == 5)
+            document.getElementById("myImg2").src = "five.jpg";
+        else if (p2 == 6)
+            document.getElementById("myImg2").src = "six.jpg";
+
+
+    </script>
+
+</html>
